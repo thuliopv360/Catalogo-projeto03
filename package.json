@@ -1,0 +1,27 @@
+{
+    "name": "catalogo-projeto03",
+    "version": "0.0.0",
+    "description": "Projeto 03 do segundo modulo de intuito educativa",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thuliopv360/Catalogo-projeto03.git"
+    },
+    "author": "Thulio Paiva",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thuliopv360/Catalogo-projeto03/issues"
+    },
+    "homepage": "https://github.com/thuliopv360/Catalogo-projeto03#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "ejs": "^3.1.7",
+        "express": "^4.18.0"
+    }
+}
