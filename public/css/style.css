@@ -4,12 +4,25 @@
     font-family: Roboto, Arial;
 }
 
-header a img#banner {
-    width: 15%;
-}
-
 header {
     background-color: rgb(223, 7, 8);
+    display: flex;
+    flex-direction: column;
+}
+
+header a {
+    align-self: center;
+}
+
+header a img#banner {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    width: 20rem;
+}
+
+header a:hover {
+    transition: transform 1s;
+    transform: translateX(0) scale(1.1);
 }
 
 nav ul#menu {
@@ -24,7 +37,7 @@ nav ul#menu li {
 nav ul#menu li a {
     text-decoration: none;
     color: white;
-    padding: 1.7rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -34,7 +47,8 @@ nav ul#menu li:hover {
 }
 
 nav ul#menu li a:hover {
-    background-color: red;
+    background-color: rgb(223, 7, 8);
+    color: rgb(0, 0, 0);
 }
 
 nav ol#submenu {
@@ -61,9 +75,18 @@ nav ol#submenu li a {
     color: rgb(249, 160, 160);
     padding: 1.1rem;
     background-color: rgb(248, 35, 35);
+    border-radius: 0.8rem;
 }
 
 ol#submenu a:hover {
-    background-color: red;
-    /* Igual a scaleX(2) scaleY(0.5) */
+    background-color: rgb(223, 7, 8);
+}
+
+footer {
+    background-color: rgb(223, 7, 8);
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 2rem;
 }
