@@ -1,11 +1,17 @@
-require("dotenv").config();
-const express = require('express');
+import express from "express"
+import { routers } from "./src/routes/routers.js"
+import path from "path"
+import dotenv from "dotenv"
+dotenv.config();
+// const routers = require("./src/routes/routers.js")
+
 const app = express();
-const path = require("path");
+let __dirname = path.resolve(path.dirname(""))
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
+app.use(routers);
 
 const port = process.env.PORT || 3000;
 const porta = 3000;

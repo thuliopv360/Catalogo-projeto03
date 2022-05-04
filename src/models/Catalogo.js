@@ -1,9 +1,9 @@
-const Sequelize = require("sequilize");
-const connection = require("../database/db");
+import { Sequelize } from "sequelize";
+import { connection } from "../database/db.js"
 
-const Catalogo = connection.define('catalogo', {
+export const catalogo = connection.define("catalogo", {
     id: {
-        type: Sequelize.INT,
+        type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
@@ -13,7 +13,7 @@ const Catalogo = connection.define('catalogo', {
         allowNull: false
     },
     imdb: {
-        type: Sequelize.INT,
+        type: Sequelize.INTEGER,
         allowNull: false
     },
     ano_de_lancamento: {
@@ -33,11 +33,11 @@ const Catalogo = connection.define('catalogo', {
         allowNull: false
     },
     duracao: {
-        type: Sequelize.INT,
+        type: Sequelize.INTEGER,
         allowNull: false
     },
     estrelas: {
-        type: Sequelize.INT,
+        type: Sequelize.INTEGER,
         allowNull: false
     },
     imagem: {
@@ -52,5 +52,6 @@ const Catalogo = connection.define('catalogo', {
     updateAt: false
 });
 
+// export default catalogo
 
-module.exports = Catalogo;
+// module.exports = Catalogo;

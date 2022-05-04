@@ -1,15 +1,15 @@
-const Catalogo = require("../models/Catalogo");
+// const Catalogo = require("../models/Catalogo.js");
 
-const getAll = async(req, res) => {
-    try {
-        const catalogo = await Catalogo.findAll();
-        res.render("index", { Catalogo });
-    } catch (err) {
-        res.status(500).send({ err: err.message });
-    }
-}
+// export const getAll = async(req, res) => {
+//     try {
+//         const catalogo = await Catalogo.findAll();
+//         res.render("index", { catalogo });
+//     } catch (err) {
+//         res.status(500).send({ err: err.message });
+//     }
+// }
 
 
-module.exports = {
-    getAll,
-};
+// module.exports = {
+//     getAll,
+// };

@@ -4,6 +4,12 @@
     font-family: Roboto, Arial;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
 header {
     background-color: rgb(223, 7, 8);
     display: flex;
@@ -80,6 +86,10 @@ nav ol#submenu li a {
 
 ol#submenu a:hover {
     background-color: rgb(223, 7, 8);
+}
+
+main {
+    min-height: 75vh;
 }
 
 footer {
