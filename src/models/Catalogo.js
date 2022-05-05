@@ -12,8 +12,8 @@ export const catalogo = connection.define("catalogo", {
         type: Sequelize.STRING,
         allowNull: false
     },
-    imdb: {
-        type: Sequelize.INTEGER,
+    descricao: {
+        type: Sequelize.STRING,
         allowNull: false
     },
     ano_de_lancamento: {
@@ -44,6 +44,10 @@ export const catalogo = connection.define("catalogo", {
         type: Sequelize.STRING,
         allowNull: false
     },
+    tipo: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
 
 }, {
     freezeTableName: true,

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Detalhes</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+
+        <main>
+
+            <section class="card">
+
+                <div id="cards">
+                    <h1>
+                        <span>Titulo: </span>
+                        <%= filmesDetalhes.titulo %>
+                    </h1>
+
+                    <img src="<%= filmesDetalhes.imagem %>" alt="imagem do filme">
+                    <p>
+                        <span>Estrelas: </span>
+                        <%= filmesDetalhes.estrelas %>
+                    </p>
+                    <p>
+                        <span>Ano de Lançamento: </span>
+                        <%= filmesDetalhes.ano_de_lancamento %>
+                    </p>
+                    <p>
+                        <span>Genero: </span>
+                        <%= filmesDetalhes.genero %>
+                    </p>
+                    <p>
+                        <span>Idioma: </span>
+                        <%= filmesDetalhes.idioma %>
+                    </p>
+                    <p><span>Legenda: </span>
+                        <%= filmesDetalhes.legenda %>
+                    </p>
+                    <p>
+                        <span>Duração: </span>
+                        <%= filmesDetalhes.duracao %>
+                    </p>
+                </div>
+
+            </section>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

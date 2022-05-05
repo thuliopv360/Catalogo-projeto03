@@ -7,12 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="./img/icone.ico" type="image/x-icon">
-    <title>Catalogo de herois</title>
+    <title>Catalogo</title>
 </head>
 
 <body>
     <%- include('./partials/header.ejs') %>
-        <main></main>
+
+        <main class="box">
+            <% listFilmes.forEach((catalogo) => { %>
+                <div class="card">
+                    <a href="/detalhes/<%= catalogo.id %> " class="cards">
+
+                        <h3>
+                            <span>Titulo: </span>
+                            <%= catalogo.titulo %>
+                        </h3>
+                        <img src="<%= catalogo.imagem %>" alt="imagem do filme">
+                        <p>
+                            <span>Estrelas: </span>
+                            <%= catalogo.estrelas %>
+                        </p>
+                        <p>
+                            <span>Ano de Lançamento: </span>
+                            <%= catalogo.ano_de_lancamento %>
+                        </p>
+                        <p>
+                            <span>Genero: </span>
+                            <%= catalogo.genero %>
+                        </p>
+                        <p>
+                            <span>Idioma: </span>
+                            <%= catalogo.idioma %>
+                        </p>
+                        <p><span>Legenda: </span>
+                            <%= catalogo.legenda %>
+                        </p>
+                        <p>
+                            <span>Duração: </span>
+                            <%= catalogo.duracao %>
+                        </p>
+                    </a>
+
+                </div>
+                <% }) %>
+        </main>
         <%- include('./partials/footer.ejs') %>
 </body>
 
