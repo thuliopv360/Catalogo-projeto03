@@ -46,7 +46,7 @@ export const catalogo = connection.define("catalogo", {
     },
     tipo: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     }
 
 }, {
@@ -56,6 +56,9 @@ export const catalogo = connection.define("catalogo", {
     updateAt: false
 });
 
-// export default catalogo
 
-// module.exports = Catalogo;
+// function initTable() {
+//     catalogo.async
+// }
+
+// initTable()

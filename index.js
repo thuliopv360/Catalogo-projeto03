@@ -11,8 +11,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded());
+app.use(express.json);
 app.use(routers);
 
-const port = process.env.PORT || 3000;
-const porta = 3000;
+const port = process.env.PORT || 3001;
+const porta = 3001;
 app.listen(porta, () => { console.log(`servidor rodando em http://localhost:${porta}`) });

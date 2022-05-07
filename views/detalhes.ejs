@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon">
     <title>Detalhes</title>
 </head>
 
 <body>
-    <%- include('./partials/header.ejs') %>
+    <%- include('./components/header.ejs') %>
 
         <main>
 
@@ -23,6 +24,10 @@
                     </h1>
 
                     <img src="<%= filmesDetalhes.imagem %>" alt="imagem do filme">
+                    <p>
+                        <span>Descricao: </span>
+                        <%= filmesDetalhes.descricao %>
+                    </p>
                     <p>
                         <span>Estrelas: </span>
                         <%= filmesDetalhes.estrelas %>
@@ -39,7 +44,8 @@
                         <span>Idioma: </span>
                         <%= filmesDetalhes.idioma %>
                     </p>
-                    <p><span>Legenda: </span>
+                    <p>
+                        <span>Legenda: </span>
                         <%= filmesDetalhes.legenda %>
                     </p>
                     <p>
@@ -50,7 +56,7 @@
 
             </section>
         </main>
-        <%- include('./partials/footer.ejs') %>
+        <%- include('./components/footer.ejs') %>
 </body>
 
 </html>

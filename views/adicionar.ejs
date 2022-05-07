@@ -11,8 +11,49 @@
 </head>
 
 <body>
-    <%- include('./partials/header.ejs') %>
-        <%- include('./partials/footer.ejs') %>
+    <%- include('./components/header.ejs') %>
+        <main>
+            <h2 id="adicionar">Cadastre aqui o seu filme</h2>
+            <form action="/create" method="POST" id="boxes">
+                <label for="titulo">Titulo: </label>
+                <input required type="text" name="titulo" id="titulo">
+
+                <label for="descricao">Descricao: </label>
+                <input required type="text" name="descricao" id="descricao">
+
+                <label for="ano_de_lancamento">Ano de Lancamento: </label>
+                <input required type="text" name="ano_de_lancamento" id="ano_de_lancamento">
+
+                <label for="genero">Genero: </label>
+                <input required type="text" name="genero" id="genero">
+
+                <label for="idioma">Idioma: </label>
+                <input required type="text" name="idioma" id="idioma">
+
+                <label for="legenda">Legenda: </label>
+                <input required type="text" name="legenda" id="legenda">
+
+                <label for="duracao">Duração: </label>
+                <input required type="text" name="duracao" id="duracao">
+
+                <label for="estrelas">Estrelas: </label>
+                <input required type="text" name="estrelas" id="estrelas">
+
+                <label for="imagem">Imagem: </label>
+                <input required type="url" name="imagem" id="imagem">
+
+                <fieldset id="fieldset">
+                    <label for="tipo">Tipo: </label>
+                    <input required type="radio" name="tipo" id="serie" value="Serie">
+                    <label for="serie">Serie</label>
+                    <input required type="radio" name="tipo" id="filme" value="Filme">
+                    <label for="filme">Filme</label>
+                </fieldset>
+
+                <button id="btnCadastrar" type="submit">Cadastrar</button>
+            </form>
+        </main>
+        <%- include('./components/footer.ejs') %>
 </body>
 
 </html>

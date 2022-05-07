@@ -1,0 +1,49 @@
+<section class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+
+        <div class="modal-header">
+            <h3>Atualizar Filme</h3>
+            <a href="/" id="close-modal-put">X</a>
+        </div>
+        <div class="modal-body">
+            <form action="/update/<%= filmesPut.id %>" method="POST" class="form-modal">
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="titulo" value="<%= filmesPut.titulo %>">
+
+                <label for="descricao">Descricao: </label>
+                <input type="text" name="descricao" id="descricao" value="<%= filmesPut.descricao %>">
+
+                <label for="ano_de_lancamento">Ano de Lancamento: </label>
+                <input type="text" name="ano_de_lancamento" id="ano_de_lancamento" value="<%= filmesPut.ano_de_lancamento %>">
+
+                <label for="genero">Genero: </label>
+                <input type="text" name="genero" id="genero" value="<%= filmesPut.genero %>">
+
+                <label for="idioma">Idioma: </label>
+                <input type="text" name="idioma" id="idioma" value="<%= filmesPut.idioma %>">
+
+                <label for="legenda">Legenda: </label>
+                <input type="text" name="legenda" id="legenda" value="<%= filmesPut.legenda %>">
+
+                <label for="duracao">Duração: </label>
+                <input type="text" name="duracao" id="duracao" value="<%= filmesPut.duracao %>">
+
+                <label for="estrelas">Estrelas: </label>
+                <input type="text" name="estrelas" id="estrelas" value="<%= filmesPut.estrelas %>">
+
+                <label for="imagem">Imagem: </label>
+                <input type="text" name="imagem" id="imagem" value="<%= filmesPut.imagem %>">
+
+                <label for="tipo">Tipo: </label>
+                <input type="radio" name="tipo" id="serie" value="Serie" value="<%= filmesPut.tipo %>">
+                <label for="serie">Serie</label>
+                <input type="radio" name="tipo" id="filme" value="Filme" value="<%= filmesPut.tipo %>">
+                <label for="filme">Filme</label>
+
+                <button id="btnCadastrar" type="submit">Atualizar</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>

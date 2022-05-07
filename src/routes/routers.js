@@ -3,30 +3,22 @@
 // const getAll = CatalogoControler.getAll
 import {
     getIndex,
-    getDetalhes
+    getDetalhes,
+    create_filme,
+    create,
+    getById,
+    update,
+    getTipo,
+    getCategory
 } from '../controllers/CatalogoController.js';
 import express from 'express';
 export const routers = express.Router();
-// export const routers = require('express').Router();
-// import {CatalogoController} from "../controllers/CatalogoController.js";
 
-// routers.get("/", CatalogoController.getAll);
-
-// exports.default = routers;
-
-// import express from 'express';
-
-// export const routers = express.Router();
-
-// routers.get("/", getIndex);
 routers.get("/", getIndex);
 routers.get("/detalhes/:id", getDetalhes);
-
-
-// routers.get("/filmes", getFilmes);
-
-// routers.get("/series", getSeries);
-
-// routers.get("/adicionar", getAdicionar);
-
-// routers.get("/categoria/:id", getCategoria);
+routers.get("/adicionar", create_filme);
+routers.post("/create", create);
+routers.get("/getById/:id/:method", getById);
+routers.post("/update/:id", update);
+routers.get("/tipo/:id", getTipo);
+routers.get("/category/:id", getCategory);

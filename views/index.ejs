@@ -6,18 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="./img/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon">
     <title>Catalogo</title>
 </head>
 
 <body>
-    <%- include('./partials/header.ejs') %>
-
+    <%- include('./components/header.ejs') %>
         <main class="box">
             <% listFilmes.forEach((catalogo) => { %>
                 <div class="card">
                     <a href="/detalhes/<%= catalogo.id %> " class="cards">
-
                         <h3>
                             <span>Titulo: </span>
                             <%= catalogo.titulo %>
@@ -46,12 +44,18 @@
                             <span>Duração: </span>
                             <%= catalogo.duracao %>
                         </p>
+                        <a href="/getById/<%= catalogo.id %>/put" id="put">Atualizar</a>
+                        <a href="/getById/<%= catalogo.id %>/delete">Apagar</a>
                     </a>
 
                 </div>
                 <% }) %>
         </main>
-        <%- include('./partials/footer.ejs') %>
+        <% if(filmesPut != null){%>
+            <%- include('./components/modalPut.ejs') %>
+                <%}%>
+
+                    <%- include('./components/footer.ejs') %>
 </body>
 
 </html>

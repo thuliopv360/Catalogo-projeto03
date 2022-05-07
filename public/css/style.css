@@ -8,7 +8,7 @@
     body {
         height: 100vh;
         width: 100vw;
-        max-width: 100%;
+        max-width: 1920px;
     }
     header {
         min-height: 15%;
@@ -86,13 +86,16 @@
     div.card {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        width: 10rem;
-        height: 10rem;
+        flex-wrap: nowrap;
+        width: 20rem;
+        height: 20rem;
         text-align: center;
         padding: 5rem;
     }
     div.card span {
+        font-weight: bold;
+    }
+    div#cards span {
         font-weight: bold;
     }
     div.card a {
@@ -101,7 +104,7 @@
     }
     a.cards {
         padding: 1rem;
-        border: solid 1px red;
+        border: solid 1px rgb(223, 7, 8);
         border-radius: 1.5rem;
     }
     a.cards:hover {
@@ -121,6 +124,134 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
+    }
+    div#cards {
+        padding: 3rem;
+        margin: 3rem;
+        border: 1px solid rgb(223, 7, 8);
+        border-radius: 2rem;
+    }
+    body main h2#adicionar {
+        font-family: 'Courier New', Courier, monospace;
+        padding: 2rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+    form#boxes {
+        margin: auto;
+        margin-bottom: 10px;
+        width: 30vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        border: solid 1px rgb(223, 7, 8);
+    }
+    form#boxes label {
+        justify-content: flex-start;
+        font-weight: 600;
+        padding-bottom: 0.3rem;
+    }
+    form#boxes input {
+        padding-bottom: 0.3rem;
+    }
+    form#boxes fieldset#fieldset {
+        padding: 0.4rem;
+        border: none;
+    }
+    form#boxes button#btnCadastrar {
+        margin: 0.8rem;
+        padding: 0.4rem;
+        width: 30%;
+        border: solid 1px rgb(223, 7, 8);
+        color: rgb(223, 7, 8);
+        cursor: pointer;
+    }
+    form#boxes button#btnCadastrar:hover {
+        background-color: rgb(223, 7, 8);
+        color: #FFF;
+        transition: all 0.8s;
+        transform: translateX(0) scale(1.2);
+    }
+    .modal-overlay {
+        background-color: #00000050;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+    }
+    .modal {
+        margin: 1rem;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        min-height: 300px;
+        background-color: #fff;
+        border-radius: 11px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(223, 7, 8);
+        padding: 1rem;
+        color: white;
+    }
+    .modal-header a#close-modal-put {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: white;
+    }
+    .modal-body {
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex: 1;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .form-modal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .form-modal input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        outline: none;
+        border: solid 2px #ccc;
+    }
+    .form-modal label {
+        color: rgb(112, 112, 112);
+        padding-top: 0.5rem;
+    }
+    .form-modal button {
+        padding: 0.6rem;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+        font-size: 1rem;
+        background-color: #fff;
+        color: rgb(223, 7, 8);
+        border: solid 1px rgb(223, 7, 8);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .form-modal button:hover {
+        background-color: rgb(223, 7, 8);
+        transition: transform 1s;
+        transform: translateX(0) scale(1.2);
+        color: #fff;
     }
     footer {
         background-color: rgb(223, 7, 8);
@@ -128,6 +259,11 @@
     footer p {
         text-align: center;
         margin-bottom: 2rem;
+        color: white;
+    }
+    footer p a {
+        color: white;
+        text-decoration: none;
     }
 }
 

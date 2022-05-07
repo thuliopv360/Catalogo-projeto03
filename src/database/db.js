@@ -9,8 +9,17 @@ export const connection = new Sequelize(
     process.env.DB_PASS, {
         host: process.env.DB_HOST,
         port: 5432,
-        dialect: "postgres"
+        dialect: 'postgres'
     }
-);
 
-// export default connection
+    // 'postgres://catalogo_user:hYufJeFEkkOzrYScgemn35BqUIniwWvT@dpg-c9qstbn5f999i81rov30-a/catalogo', 
+    // {
+    //     dialect: 'postgres',
+    //     dialectOptions: {
+    //         ssl: {
+    //             require: true,
+    //             rejectUnauthorized: false
+    //         }
+    //     }
+    // }
+);
