@@ -1,0 +1,20 @@
+<section class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+
+        <div class="modal-header">
+            <h3>Remover Filme</h3>
+            <a href="/" id="close-modal-put">X</a>
+        </div>
+        <div class="modal-body">
+            <p>Tem certeza que deseja excluir o
+                <%= filmesDel.nome%>
+            </p>
+            <div id="btns-del">
+                <a href="/" id="no">Não</a>
+                <a href="/remove/<%= filmesDel.id %>" id="yes">Sim</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>

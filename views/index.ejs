@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>Catalogo</title>
 </head>
 
@@ -44,9 +45,11 @@
                             <span>Duração: </span>
                             <%= catalogo.duracao %>
                         </p>
-                        <a href="/getById/<%= catalogo.id %>/put" id="put">Atualizar</a>
-                        <a href="/getById/<%= catalogo.id %>/delete">Apagar</a>
                     </a>
+                    <nav id="putAndDelete">
+                        <a href="/getById/<%= catalogo.id %>/put" id="put">Atualizar</a>
+                        <a href="/getById/<%= catalogo.id %>/delete" id="delete">Apagar</a>
+                    </nav>
 
                 </div>
                 <% }) %>
@@ -54,8 +57,10 @@
         <% if(filmesPut != null){%>
             <%- include('./components/modalPut.ejs') %>
                 <%}%>
-
-                    <%- include('./components/footer.ejs') %>
+                    <% if(filmesDel != null){%>
+                        <%- include('./components/modalDel') %>
+                            <%} %>
+                                <%- include('./components/footer.ejs') %>
 </body>
 
 </html>

@@ -10,16 +10,18 @@ export const connection = new Sequelize(
         host: process.env.DB_HOST,
         port: 5432,
         dialect: 'postgres'
-    }
+    });
 
-    // 'postgres://catalogo_user:hYufJeFEkkOzrYScgemn35BqUIniwWvT@dpg-c9qstbn5f999i81rov30-a/catalogo', 
-    // {
-    //     dialect: 'postgres',
-    //     dialectOptions: {
-    //         ssl: {
-    //             require: true,
-    //             rejectUnauthorized: false
-    //         }
-    //     }
-    // }
-);
+// 'postgres://catalogo_user:hYufJeFEkkOzrYScgemn35BqUIniwWvT@dpg-c9qstbn5f999i81rov30-a/catalogo', 
+// {
+//     dialect: 'postgres',
+//     dialectOptions: {
+//         ssl: {
+//             require: true,
+//             rejectUnauthorized: false
+//         }
+//     }
+// }
+
+//DB_URL = postgres: //catalogo_user:hYufJeFEkkOzrYScgemn35BqUIniwWvT@dpg-c9qstbn5f999i81rov30-a/catalogo
+// no .env coloca isso

@@ -35,10 +35,16 @@
                 <input type="text" name="imagem" id="imagem" value="<%= filmesPut.imagem %>">
 
                 <label for="tipo">Tipo: </label>
-                <input type="radio" name="tipo" id="serie" value="Serie" value="<%= filmesPut.tipo %>">
-                <label for="serie">Serie</label>
-                <input type="radio" name="tipo" id="filme" value="Filme" value="<%= filmesPut.tipo %>">
-                <label for="filme">Filme</label>
+                <fieldset id="fieldset_modal">
+                    <fieldset>
+                        <input type="radio" name="tipo" id="serie" value="Serie" value="<%= filmesPut.tipo %>">
+                        <label for="serie">Serie</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="tipo" id="filme" value="Filme" value="<%= filmesPut.tipo %>">
+                        <label for="filme">Filme</label>
+                    </fieldset>
+                </fieldset>
 
                 <button id="btnCadastrar" type="submit">Atualizar</button>
             </form>

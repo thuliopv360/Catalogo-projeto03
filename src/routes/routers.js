@@ -9,7 +9,8 @@ import {
     getById,
     update,
     getTipo,
-    getCategory
+    getCategory,
+    remove
 } from '../controllers/CatalogoController.js';
 import express from 'express';
 export const routers = express.Router();
@@ -22,3 +23,4 @@ routers.get("/getById/:id/:method", getById);
 routers.post("/update/:id", update);
 routers.get("/tipo/:id", getTipo);
 routers.get("/category/:id", getCategory);
+routers.get("/remove/:id", remove);

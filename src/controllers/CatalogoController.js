@@ -35,11 +35,9 @@ export const create_filme = (req, res) => {
 export const create = async(req, res) => {
     try {
         const filmes = req.body;
-
         if (!filmes) {
             return res.redirect("/create_filme");
         }
-
         await catalogo.create(filmes);
         res.redirect("/");
     } catch (err) {
@@ -99,12 +97,23 @@ export const getTipo = async(req, res) => {
 export const getCategory = async(req, res) => {
     try {
         const id = req.params.id;
-
+        if (await catalogo.tipo == id) {
+            res.render("categoria", { catalogo, id })
+        }
     } catch (err) {
         res.status(500).send({ err: err.message });
     }
 }
 
-// module.exports = {
-//     getAll,
-// };
+
+export const remove = async(req, res) => {
+        try {
+            await catalogo.destroy({ where: { id: req.params.id } });
+            res.redirect("/")
+        } catch (err) {
+            res.status(500).send({ err: err.message });
+        }
+    }
+    // module.exports = {
+    // getAll,
+    // };
