@@ -57,8 +57,8 @@ export const catalogo = connection.define("catalogo", {
 });
 
 
-// function initTable() {
-//     catalogo.async
-// }
+const initTable = async() => {
+    await catalogo.sync();
+}
 
-// initTable()
+initTable()

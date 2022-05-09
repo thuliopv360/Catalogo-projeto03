@@ -13,6 +13,11 @@
 
 <body>
     <%- include('./components/header.ejs') %>
+        <div>
+            <%if(message != ""){%>
+                <%-include('./components/alerts')%>
+                    <% } %>
+        </div>
         <main class="box">
             <% listFilmes.forEach((catalogo) => { %>
                 <div class="card">
@@ -61,6 +66,8 @@
                         <%- include('./components/modalDel') %>
                             <%} %>
                                 <%- include('./components/footer.ejs') %>
+
+                                    <script src="/js/script.js"></script>
 </body>
 
 </html>
