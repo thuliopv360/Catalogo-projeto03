@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
-export const connection = new Sequelize(process.env.DATABASE_URL, {
+export const connection = new Sequelize('postgres: //admin:NthraUDF7cBN3OkNnhitAQUkIeOjiC3m@dpg-c9s6arp0gd05vncnms3g-a.oregon-postgres.render.com/db_filme', {
     // process.env.DB_BASE,
     // process.env.DB_USER,
     // process.env.DB_PASS,
@@ -14,9 +14,17 @@ export const connection = new Sequelize(process.env.DATABASE_URL, {
             rejectUnauthorized: false
         }
     }
+})
 
+// export const connection = new Sequelize(process.env.DB_BASE, process.env.DB_USER, process.env.DB_PASS, {
+//     host: process.env.DB_HOST,
+//     port: 5432,
+//     dialect: 'postgres'
+// });
 
-});
+// module.exports = sequelize;
+
+// });
 //    ,{ host: process.env.DB_HOST,
 //     port: 5432,
 //     dialect: 'postgres'
